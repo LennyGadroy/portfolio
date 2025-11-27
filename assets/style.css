@@ -1,0 +1,863 @@
+@font-face {
+    font-family: 'TVA' ;
+    src: url('TVA.ttf') format('truetype') ;
+}
+
+:root {
+/* Main Colors */
+    --Primary: #FF6B2D;
+    --Primary-RGB: 255, 107, 45;
+    --Secondary: #AC3B00;
+    --Secondary-RGB: 172, 59, 0;
+    --Black: #000;
+    --White: #fff;
+    --Background: #000;
+
+/* Fonts */
+    --Font-Special: 'TVA', sans-serif;
+    --Font-Serif: serif ;
+    --SansSerif: system-ui, -apple-system, sans-serif;
+
+    --Title-Size: 2rem;
+    --SubTitle-Size: 1.5rem;
+    --Body-Size: 1.25rem;
+    --SubBody-Size: 1rem;
+    --Title-Weight: 600;
+    --SubTitle-Weight: 500;
+    --Body-Weight: 400;
+    --SubBody-Weight: 300;
+    --Title-Height: 3;
+    --SubTitle-Height: 2;
+    --Body-Height: 1.5;
+    --SubBody-Height: 1.2;
+
+/* Borders */
+    --Border-Color: var(--Primary);
+    --Border-Style: solid;
+    --Border-Width: 1px;
+
+/* Box Shadow */
+    --shadow-primary: 0 0.75rem 1.875rem rgba(var(--Primary-RGB), 0.5);
+}
+
+body {
+    background-color: var(--Background);
+    color: var(--Primary);
+    font-family: var(--Font-Special);
+    font-size: var(--Body-Size);
+    margin: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+button {
+    font-family: var(--Font-Special);
+    font-size: var(--Body-Size);
+    text-transform: uppercase;
+    color: var(--Primary);
+    padding: 5px;
+    background-color: var(--Background);
+    border: 1px solid var(--Primary);
+}
+
+button:hover {
+    box-shadow: 0 0 10px var(--Primary);
+    cursor: pointer;
+}
+
+a {color: var(--Primary); text-decoration: none;}
+
+hr {
+    border-color: var(--Primary);
+    margin: 20px 0;
+}
+
+/* ------
+Default Page 
+----- */
+.tva-container {
+    border: 1px solid var(--Primary);
+    box-shadow: var(--shadow-primary);
+    padding: 0.5rem;
+    margin: 20px 200px 20px 200px;
+}
+
+.tva-header {
+    display: flex;
+    position: sticky;
+    background-color: var(--Background);
+    border-bottom: 3px solid var(--Primary);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    top: 0;
+    z-index: 1000;
+}
+
+.tva-header a {width: 5%;}
+
+.tva-header img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none; /* Enlève l'effet hover standard de vos boutons */
+}
+
+/* Style des barres du hamburger */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--Primary);
+    transition: all 0.3s ease-in-out;
+}
+
+.tva-nav ul {
+    display: flex;
+    border-bottom: 1px solid var(--Primary);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tva-nav li {
+    font-size: var(--SubTitle-Size);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.tva-nav li.active {
+    background-color: var(--Primary);
+    color: var(--Black);
+}
+
+.tva-nav li a {
+    color: var(--Primary);
+    text-decoration: none;
+}
+
+.tva-nav li.active a {
+    color: var(--Black);
+}
+
+.projects .tva-nav,
+.reals .tva-nav,
+.albums .tva-nav {
+    position: sticky;
+    background-color: var(--Background);
+    margin: 20px;
+    top: 80px;
+    z-index: 1000;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.panel {
+    border: 1px solid var(--Primary);
+    min-height: 250px;
+    max-height: fit-content;
+    padding: 1rem;
+}
+
+.panel-title {
+    border-bottom: 1px solid var(--Primary);
+    font-size: var(--Title-Size);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.panel-title-graph {
+    font-size: var(--Title-Size);
+    font-weight: bold;
+}
+
+.panel-subtitle {
+    border-bottom: 1px solid var(--Primary);
+    font-size: var(--SubTitle-Size);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.file-list {
+    color: var(--White);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-list li {
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+.file-list li:hover {
+    background-color: var(--Primary);
+}
+
+.file-list li.active {
+    background-color: var(--Primary);
+    color: var(--White);
+}
+
+.file-list li span, .file-list li em {
+    text-transform: lowercase;
+    font-size: var(--Body-Size);
+}
+
+.action-icons {
+    display: flex;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.icon-block .icon {
+    display: block;
+    font-size: var(--Title-Size);
+    margin-bottom: 0.5rem;
+}
+
+.program-list {
+    margin-left: 50px;
+    padding: 0;
+}
+
+.program-list li {
+    font-size: var(--Body-Size);
+    margin-bottom: 1rem;
+}
+
+.program-list li div.action-icons,
+.program-list li p,
+.program-list li p+a {
+    font-size: var(--Body-Size);
+    color: var(--White);
+    margin: 0 0 0 -50px;
+}
+
+.graph-value {color: var(--White); font-size: var(--Title-Size);}
+
+.graph-value .unit {font-size: var(--Body-Size)}
+
+.graph-content {
+    width: 300px;
+}
+
+.graph-svg {
+    border: 1px solid var(--Primary);
+    width: 100%;
+    height: 150px;
+    margin-top: 1rem;
+}
+
+.tva-list {
+    display: flex;
+    border-bottom: 1px solid var(--Primary);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tva-list li {
+    font-size: var(--Body-Size);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.panel#admin .left-right.inversed {
+    background-color: var(--Primary);
+    color: var(--Black);
+    font-size: var(--SubTitle-Size);
+    padding: 3px;
+}
+
+.panel#admin .left-right {font-size: var(--Body-Size)}
+
+.inversed li {
+    font-size: var(--Body-Size);
+}
+
+.tva-footer {
+    display: flex;
+    grid-column: 1 / -1;
+    color: var(--Primary);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 2px solid var(--Primary);
+    font-family: var(--Font-Special);
+    text-transform: uppercase;
+    font-size: var(--Body-Size);
+    letter-spacing: 1px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-top: 50px;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-section.left .sep {
+    opacity: 0.5;
+}
+
+.footer-section.center {
+    font-size: var(--Body-Size);
+    opacity: 0.7;
+}
+
+.footer-link {
+    color: var(--Primary);
+    text-decoration: none;
+    padding: 2px 5px;
+    transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+    background-color: var(--Primary);
+    color: var(--Black);
+    box-shadow: 0 0 10px var(--Primary);
+}
+
+.undefined {
+    opacity: 0.75;
+}
+
+.blink {animation: blinker 2s linear infinite;}
+@keyframes blinker {50% {opacity: 0;}}
+
+/* ------
+Projects Page 
+----- */
+.projects .grid-col {
+    margin-top: 20px;
+}
+
+.projects h2,
+.reals h2,
+.albums h2 {
+    font-size: var(--Title-Size);
+    text-align: center;
+}
+
+.projects .panel,
+.reals .panel,
+.albums .panel {
+    margin: 20px 20px 50px 20px;
+    padding: 20px;
+}
+
+.projects .panel>.panel-title+.left-right>.panel-subtitle{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.projects .left-part,
+.projects .right-part,
+.projects .one-part {
+    width: calc(90%-10px);
+    padding: 0 10px 0 10px;
+}
+
+.projects .left-part h3,
+.projects .right-part h3,
+.reals .left-part h3,
+.reals .middle-part h3,
+.reals .right-part h3 {
+    font-size:var(--Title-Size);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.projects .left-part .left-right,
+.projects .right-part .left-right,
+.reals .left-part .left-right,
+.reals .middle-part .left-right,
+.reals .right-part .left-right,
+.albums .left-part .left-right,
+.albums .middle-part .left-right,
+.albums .right-part .left-right {
+    line-height: var(--SubBody-Height);
+}
+
+.projects ul.left-right,
+.projects ul.left-right li ul li{
+    color: var(--White);
+    list-style-type: square;
+    margin-top: 0;
+}
+
+.left-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.left-right {
+    margin-right: 50px;
+}
+
+.projects .left-right em {
+    font-size: var(--SubBody-Size);
+}
+
+.projects img,
+.reals img,
+.albums img {
+    display: flex;
+    border: 1px solid var(--Primary);
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    opacity: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects img:hover, 
+.reals img:hover,
+.albums img:hover {
+    opacity: 1;
+}
+
+.projects .left-part img:last-of-type, .projects .right-part img:last-of-type,
+.reals .left-part img:last-of-type, .reals .middle-part img:last-of-type, .reals .right-part img:last-of-type,
+.albums .left-part img:last-of-type, .albums .middle-part img:last-of-type, .albums .right-part img:last-of-type
+{margin-bottom: 10px;}
+
+/* ------
+Reals Page 
+----- */
+.reals .grid-col:first-of-type {grid-template-columns: 1fr 1fr;}
+.reals .grid-col:last-of-type {grid-template-columns: 1fr 1fr 1fr;}
+
+/* ------
+Albums Page
+----- */
+.albums .grid-col {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.albums .panel-subtitle {
+    font-size: var(--SubTitle-Size);
+}
+
+/* ------
+Skills Page 
+----- */
+
+/* ------
+CV Page 
+----- */
+.cv .header {
+    display: flex;
+    border-bottom: 3px solid var(--Primary);
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.cv .header h1 {
+    color: var(--Primary);
+    font-size: var(--Title-Size);
+    margin-bottom: 5px;
+}
+
+.cv .header .pitch {
+    color: var(--White);
+    font-size: var(--Body-Size);
+    max-width: 80%;
+}
+
+.photo-profil {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--Primary);
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 40px;
+}
+
+.cv .container {
+    display: flex;
+}
+
+.cv .container a {
+    text-decoration: underline;
+}
+
+.cv .left-part {
+    width: 50%;
+    padding: 20px 20px 20px 30px;
+}
+
+.cv .left-part h3 {
+    font-size: var(--Body-Size);
+    margin-top: 10px;
+}
+
+.cv .left-part li {
+    color: var(--White);
+    font-size: var(--Body-Size);
+    margin-bottom: 4px;
+}
+
+.cv .left-part a {
+    color: var(--White);
+    text-decoration: none;
+}
+
+.cv .left-part a:hover {
+    text-decoration: underline;
+}
+
+.cv ul,
+.cv #hard-skills ul li ul {
+    list-style: square;
+    margin-left: 30px;
+    padding-left: 0;
+}
+
+.cv #contact ul {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.cv li {
+    color: var(--White);
+    margin-left: 10px;
+    padding: 3px 0;
+}
+
+.cv hr {
+    visibility: hidden;
+    height: 5px;
+    margin: 0;
+}
+
+.no-gap {
+    color: var(--White);
+    margin-left: 10px;
+}
+
+.no-gap>h3 {margin-bottom: 0;}
+.no-gap p {margin-top: 0;}
+
+.cv .right-part {
+    padding: 20px 30px 20px 20px;
+}
+
+.cv .left-part .panel,
+.cv .right-part .panel {
+    min-height: 50px;
+    margin-bottom: 25px;
+}
+
+.cv .left-part .panel:last-of-type,
+.cv .right-part .panel:last-of-type {
+    margin-bottom: 0;
+}
+
+.cv .left-part .panel-title,
+.cv .right-part .panel-title {
+    font-size: var(--Title-Size);
+}
+
+.cv .left-part .panel-subtitle,
+.cv .right-part .panel-subtitle {
+    font-size: var(--SubTitle-Size);
+}
+
+.cv .panel-subtitle {
+    border-bottom: none;
+}
+
+.dates {
+    font-size: var(--Body-Size);
+    font-style: italic;
+    margin-left: 10px;
+}
+
+/* ------
+Contact Page 
+----- */
+
+/* ------
+Terms 
+----- */
+
+
+/* ------
+Hover 
+----- */
+.hover:hover {
+    box-shadow: var(--shadow-primary);
+}
+
+/* ------
+Colors 
+----- */
+.status,
+.projects ul.left-right li,
+.cv li b
+{color: var(--Primary);}
+
+
+.program-list a,
+.projects .left-part .left-right span,
+.projects .right-part .left-right span,
+.reals .left-part .left-right span,
+.reals .middle-part .left-right span,
+.reals .right-part .left-right span,
+.projects .left-right em,
+.albums .left-right,
+.cv .right-part .panel-title p,
+.cv .panel>p+p
+{color: var(--White);}
+
+/* ------
+Responsive 
+----- */
+
+/* Laptop */ @media only screen and (max-width:1199px) {
+    .tva-container {
+        max-width: 100%;
+        width: 100vw;
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid var(--Primary);
+        margin: 0;
+    }
+
+/* Tablet */ @media only screen and (max-width:991px) {
+    .tva-header {
+        flex-wrap: wrap;
+        padding: 0.5rem;
+        position: relative;
+    }
+
+    .projects .tva-nav,
+    .reals .tva-nav,
+    .albums .tva-nav {
+        position: relative;
+    }
+
+    .tva-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tva-nav li {
+        padding: 0.5rem;
+    }
+    
+    .cv .left-part, 
+    .cv .right-part {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .cv .header {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .cv .header .pitch {
+        max-width: 100%;
+    }
+    
+    .photo-profil {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .status {display: none;}
+
+/* Mobile */ @media only screen and (max-width:767px) {
+    .main-grid {
+        display: flex;
+        grid-template-columns: 1fr;
+        flex-direction: column-reverse;
+    }
+
+    .tva-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        gap: 20px;
+    }
+
+    .tva-header a {width: 30%;}
+    .tva-header button:hover {box-shadow: none;}
+
+    .tva-header img {
+        width: 60%;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002;
+        rotate: 180deg;
+    }
+
+    .tva-nav ul {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--Background);
+        width: 100%;
+        border-bottom: none;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 1001;
+        padding-bottom: 20px;
+    }
+
+    .tva-nav.active ul {
+        left: 0;
+    }
+
+    .tva-nav ul li {
+        margin: 15px 0;
+        border-bottom: 1px dashed var(--Primary);
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hamburger.active .bar:nth-child(1) {transform: translateY(8px) rotate(45deg);}
+    .hamburger.active .bar:nth-child(2) {opacity: 0;}
+    .hamburger.active .bar:nth-child(3) {transform: translateY(-8px) rotate(-45deg);}
+    
+    .status {display: none;}
+
+    .cv .container {
+        width: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .cv .left-part, 
+    .cv .right-part {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 30px 0 0 0;
+    }
+    
+    .cv .header {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .cv .header .pitch {
+        max-width: 100%;
+    }
+    
+    .photo-profil {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        width: 50px;
+        height: auto;
+    }
+    
+    .grid-col, 
+    .grid-row,
+    .albums .grid-col,
+    .reals .grid-col:first-of-type,
+    .reals .grid-col:last-of-type {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects .left-part,
+    .projects .right-part,
+    .projects .one-part,
+    .reals .left-part,
+    .reals .middle-part,
+    .reals .right-part {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .panel-title {
+        text-align: center;
+    }
+    
+    .left-right {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    ul.left-right {
+        margin-right: 0;
+    }
+
+    .tva-footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .footer-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    button, .tva-nav li {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cv .photo-profil {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .projects img, 
+    .reals img,
+    .albums img {
+        height: auto;
+    }
+}
+}
+}

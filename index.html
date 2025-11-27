@@ -3,1000 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Lenny Gadroy Portfolio</title>
-    <link rel="stylesheet" href="assets/Glass-effect.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/GL.png">
-
-    <style>
-        @keyframes fadeIn {
-            to {transform: scale(4); opacity: 0;}
-        }
-    </style>
-    <style>
-        @keyframes fadeIn {
-            from {opacity: 0; transform: translate(-50%, -50%) scale (0.8);}
-            to {opacity: 1; transform: translate(-50%, -50%) scale(1);}
-            }
-    </style>
+    <title>Lenny Gadroy - Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
-
 <body>
-    <div class="bg-shapes">
-        <div class="shape" style="transform: translate(-4.83425px, -0.0528541px)"></div>
-        <div class="shape" style="transform: translate(-4.83425px, -0.0528541px)"></div>
-        <div class="shape" style="transform: translate(-4.83425px, -0.0528541px)"></div>
-        <div class="shape" style="transform: translate(-4.83425px, -0.0528541px)"></div>
-        <div class="shape" style="transform: translate(-4.83425px, -0.0528541px)"></div>
-        <div class="shape" style="transform: translate(-4.83425px, -0.0528541px)"></div>
-    </div>
-    <header>
-        <div class="container">
-            <nav class="glass" style="position: relative;">
-                <div class="logo" onclick="showPage('home')">
-                    <div class="logo-icon">
-                        <img src="images/GL.png" style="margin-left: 20px; margin-top: 10px;" width="200" height="200" alt="Lenny Gadroy">
-                    </div>
-                </div>
-                <div class="nav-links">
-                    <a href="#" onclick="showPage('home')" class="active">Accueil</a>
-                    <a href="#" onclick="showPage('real')">Réalisations</a>
-                    <a href="#" onclick="showPage('services')">Compétences</a>
-                    <a href="#" onclick="showPage('cv')">CV</a>
-                    <a href="#" onclick="showPage('contact')" class="linck">Contactez-moi !</a>
-                </div>
+    <div class="tva-container">
+        <header class="tva-header">
+            <a class="logo" href="index.html"><img src="assets/logo.svg"></img></a>
+            <button class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="tva-nav">
+                <ul>
+                    <li class="active"><a href="index.html">Tableau de bord</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="reals.html">Réalisations</a></li>
+                    <li><a href="albums.html">Albums</a></li>
+                    <li><a href="cv.html">Curriculum</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
-        </div>
-    </header>
-    <div id="home" class="page active">
-        <div class="container">
-            <div class="content-wrapper">
-                <section class="hero glass" style="position: relative;">
-                    <div class="hero-image">
-                        <img src="images/PP Reims.jpg" alt="Lenny Gadroy">
+            <div class="status blink">■ SYSTEM ACTIVE</div>
+        </header>
+        <main class="main-grid">
+            <div class="grid-row">
+                <div class="panel" id="select">
+                    <div class="panel-title">Tous les Projets</div>
+                    <ul class="file-list">
+                        <li id="revue" class="active">Revue globale</li>
+                        <li id="goon"><span>[v2]</span> GOON</li>
+                        <li id="skills">Skills Shop</li>
+                        <li id="yligen"><span>[v2]</span> YLIGEN</li>
+                        <li id="geoptime">GeopTime</li>
+                        <li id="filrouge">Fil Rouge</li>
+                        <li id="noevell">Noevell</li>
+                        <li id="portfolio"><span>[v2]</span> Portfolio</li>
+                    </ul>
+                </div>
+                <div class="panel" id="graph">
+                    <div class="panel-title-graph">Evolution temporelle</div>
+                    <div class="panel-subtitle">De l'avancé de chaque projet</div>
+                    <div class="graph-content">
+                        <div class="graph-value">24 824 <span class="unit">lignes de codes</span></div>
+                        <svg class="graph-svg" viewBox="0 0 100 50">
+                            <polyline fill="none" stroke="#FFF" stroke-width="1" points="0,49 5,38 10,35 20,38 30,30 40,28 50,20 60,18 70,22 80,20 90,5 100,0" />
+                        </svg>
                     </div>
-                    <div class="hero-content">
-                        <h1>Bienvenue dans le Futur !</h1>
+                </div>
+            </div>
+            <div class="panel" id="action-list">
+                <div class="panel-title">Selectionner un programme</div>
+                <ol class="program-list">
+                    <li>Select Mode :
+                        <div class="action-icons">
+                            <div class="icon-block">
+                                <span class="icon">[FE]</span><span>Front-end</span>
+                            </div>
+                            <div class="icon-block">
+                                <span class="icon">[UX]</span><span>User Experience</span>
+                            </div>
+                            <div class="icon-block">
+                                <span class="icon">[UI]</span><span>User Interface</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Executing :
+                        <p>À la recherche d'un stage de fin d'études.</p>
+                    </li>
+                    <li>Refreshing System...
+                        <p>Passions rechargées : Photographie (Concerts, F1), Automobile et Création visuelle.</p>
+                    </li>
+                    <li>SETTINGS
                         <p>
-                            Découvrez mon portfolio conçu autour d'un design innovant : le Glassmorphism.
-                            Ce style apporte profondeur et élégance à l'UX et l'UI.
-                            <br>
-                            Épuré, translucide et interactif : naviguez à travers mon univers.
+                        <u>Config:</u> Rigueur [ON], Créativité [MAX], Autonomie [ENABLED].
+                            <br><u>Tools:</u> Suite Adobe, Notion, VS Code.
                         </p>
-                        <a href="#" class="cta-button" onclick="showPage('real')">Mes réalisations</a>
-                        <a href="#" class="cta-button" onclick="showPage('services')">Mes compétences</a>
-                    </div>
-                </section>
+                    </li>
+                    <li>ENJOY IT
+                        <p><a href="contact.html">>> INITIALISER LE CONTACT <<</a></p>
+                    </li>
+                </ol>
             </div>
-        </div>
-    </div>
-    <div id="real" class="page">
-        <div class="container">
-            <div class="content-wrapper">
-                <section class="real-content">
-                    <div class="real-text glass">
-                        <h2>A propos</h2>
-                        <p>
-                            J'ai concrétisé plusieurs projets d'envergure. Ma passion pour l'<strong>Intégration Web et le WebDesign</strong> a abouti à la création d'interfaces originales et ergonomiques.
-                        </p>
-                        <p>
-                            Au-delà du numérique, ma créativité s'exprime par l'art de la <strong>narration visuelle et sonore</strong>, en immortalisant des moments uniques pour raconter des histoires captivantes.
-                        </p>
-                    </div>
-                    <div class="stats">
-                        <div class="stat-card glass">
-                            <div class="stat-number">25</div>
-                            <div class="stat-label">Fichiers de code</div>
-                        </div>
-                        <div class="stat-card glass">
-                            <div class="stat-number">12</div>
-                            <div class="stat-label">WebDesigns conçus</div>
-                        </div>
-                        <div class="stat-card glass">
-                            <div class="stat-number">+50</div>
-                            <div class="stat-label">Designs créés</div>
-                        </div>
-                        <div class="stat-card glass">
-                            <div class="stat-number">8</div>
-                            <div class="stat-label">Événements organisés</div>
-                        </div>
-                        <div class="stat-card glass">
-                            <div class="stat-number">+500</div>
-                            <div class="stat-label">Photos prises</div>
-                        </div>
-                        <div class="stat-card glass">
-                            <div class="stat-number">+75</div>
-                            <div class="stat-label">Leçons partagées</div>
-                        </div>
-                    </div>
-                </section>
-                <hr class="glass-bar"></hr>
-                <section class="real-section">
-                    <div class="real-container glass">
-                        <h4 style="font-size: 1.6rem; color: white; text-align: center; margin-top: 30px; margin-bottom: 30px;">Sommaire</h4>
-                        <ul class="nav-links real-links">
-                            <li style="list-style-type:none;"><a href="#real-Codage"><u>Codage</u></a></li>
-                            <li><a href="#real-WebDesign"><u>WebDesign</u></a></li>
-                            <li><a href="#real-Communication"><u>Communication</u></a></li>
-                            <li><a href="#real-Photographie"><u>Photographie</u></a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="real-section">
-                    <div class="real-container glass-noeffect background-005">
-                        <h2 class="service-title glass padding background-005" id="real-Codage">1. Codage</h2>
-                        <h3 class="service-title glass padding background-005">a. Les grands projets</h3>
-                        <div class="real-twogrid">
-                            <div class="real-html glass background-005">
-                                <h3>Goon : Blindtests<br><em>Application web multijoueur</em></h3>
-                                <p>
-                                    <u>Aperçu du rendu :</u>
-                                    <img src="images/Reals/Projects/Goon/1.png" width="500" height="400">
-                                </p>
-                                <p><button class="glass button background-005"><a href="https://lennygadroy.github.io/goon/" target="_blank">Arriverez-vous à deviner toutes les musiques ?</a></button></p>
-                                <p><em>Codé en JavaScript, HTML et CSS, avec également Node et Socket.io</em></p>
-                            </div>
-                            <div class="real-html glass background-005">
-                                <h3>YLIGEN<br><em>Site internet</em></h3>
-                                <p>
-                                    <u>Aperçu du rendu :</u>
-                                    <img src="images/Reals/Design/Home/1.png" width="500" height="300">
-                                </p>
-                                <p><button class="glass button background-005"><a href="#yligen">Plus d'informations ici →</a></button></p>
-                                <p><em>Codé en HTML, CSS, JS</em></p>
-                            </div>
-                        </div>
-                        <hr class="glass-bar">
-                        <div class="real-twogrid">
-                            <div class="real-html glass background-005">
-                                <h3>GeopTime<br><em>Site internet & Refonte graphique</em></h3>
-                                <p>
-                                    <u>Un aperçu arrive très bientôt... Restez à l'affût !</u>
-                                </p>
-                                <p><button class="glass button background-005"><a href="https://geoptime.com/" target="_blank">Consulter la précédente version</a></button></p>
-                                <p><em>Codé en HTML, CSS, JS et PHP</em></p>
-                            </div>
-                            <div class="real-html glass background-005">
-                                <h3>Noevell<br><em>Site internet</em></h3>
-                                <p>
-
-                                    <u>Un aperçu arrive très bientôt... Restez à l'affût !</u>
-                                </p>
-                                <p><em>Codé en HTML et CSS</em></p>
-                            </div>
-                        </div>
-                        <h3 class="service-title glass padding margin-top background-005">b. Les projets plus petits</h3>
-                        <div class="real-grid">
-                            <div class="real-html glass background-005">
-                                <h3>Convertisseur Universel : <br><em>Entier à Binaire</em></h3>
-                                <p>
-                                    <u>Aperçu du rendu :</u>
-                                    <img src="images/Reals/Projects/Convertisseur/1.png" width="300" height="240">
-                                </p>
-                                <p><button class="glass button background-005"><a href="https://lennygadroy.github.io/convertisseur/" target="_blank">Convertissez dès à présent</a></button></p>
-                                <p><em>Codé en HTML, CSS, JS</em></p>
-                            </div>
-                            <div class="real-html glass background-005">
-                                <h3>Code César : <br><em>Chiffrement / Déchiffrement</em></h3>
-                                <p>
-                                    <u>Aperçu du rendu :</u>
-                                    <img src="images/Reals/Projects/César/1.png" width="300" height="240">
-                                </p>
-                                <p><button class="glass button background-005"><a href="https://lennygadroy.github.io/code-cesar/" target="_blank">Chiffrez vos messages</a></button></p>
-                                <p><em>Codé en HTML, CSS, JS</em></p>
-                            </div>
-                            <div class="real-html glass background-005">
-                                <h3>Jeu du Dino <br><em>par Chrome</em></h3>
-                                <p>
-                                    <u>Aperçu du rendu :</u>
-                                    <img src="images/Reals/Projects/Dino/1.png" width="300" height="150">
-                                </p>
-                                <p><button class="glass button background-005"><a href="https://lennygadroy.github.io/dino/" target="_blank">Jouez-y dès maintenant !</a></button></p>
-                                <p><em>Codé en HTML, CSS, JS</em></p>
-                            </div>
-                            <div class="real-html glass background-005">
-                                <h3>Qui est-ce ?<br><em>Version web locale</em></h3>
-                                <p>
-                                    <u>Aperçu du rendu :</u>
-                                    <img src="images/Reals/Projects/Who/1.png" width="300" height="240">
-                                </p>
-                                <p><button class="glass button background-005"><a href="https://lennygadroy.github.io/qui-est-ce/" target="_blank">Devinerez-vous qui est-ce ?</a></button></p>
-                                <p><em>Codé en HTML, CSS, JS</em></p>
-                            </div>
-                            <div class="real-html glass background-005">
-                                <h3>2048<br><em>par Gabriele Cirulli</em></h3>
-                                <p>
-                                    <u>Aperçu du rendu :</u>
-                                    <img src="images/Reals/Projects/2048/1.png" width="300" height="240">
-                                </p>
-                                <p><button class="glass button background-005"><a href="https://lennygadroy.github.io/2048/" target="_blank">En cours de développement...</a></button></p>
-                                <p><em>Codé en HTML, CSS, JS</em></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <hr class="glass-bar">
-                </hr>
-                <section class="real-section">
-                    <div class="real-container glass-noeffect background-005">
-                        <h2 class="service-title glass padding background-005" id="real-WebDesign">2. WebDesign</h2>
-                        <h3 id="yligen" class="service-title glass padding background-005">Yligen : Refonte globale de l'identité de l'agence
-                            <p class="classic-text"><br>Comprenant la réalisation intégrale de : 
-                                <ol class="classic-text">
-                                    <li>La nouvelle identité visuelle ;</li>
-                                    <li>Le zoning ;</li>
-                                    <li>Le wireframe ;</li>
-                                    <li>La maquette ;</li>
-                                    <li>Le prototype ;</li>
-                                    <li>Le rendu final en HTML, CSS et JavaScript.</li>
-                                </ol>
-                            </p>
-                            <p><button class="glass button background-005"><a href="https://yligen.github.io/home" target="_blank">Consulter la toute nouvelle page internet de l'agence YLIGEN</a></button></p>
-                        </h3>
-                        <div class="real-onegrid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Design/Home/1.png" alt="New Website Home - Yligen - Picture"
-                                    width="1100" height="600">
-                                <h3>[Nouveau] Page d'accueil & Menu de navigation</h3>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Design/Contact/1.png"
-                                    alt="New Website Contact form - Yligen - Picture" width="1100" height="500">
-                                <h3>[Nouveau] Formulaire de contact</h3>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Design/Footer/1.png" alt="New Website Navbar - Yligen - Picture"
-                                    width="1100" height="350">
-                                <h3>[Nouveau] Footer</h3>
-                            </div>
-                        </div>
-                        <h3 class="service-title glass padding margin-top background-005">Yligen : Premier design de l'entreprise
-                             <p class="classic-text"><br>Comprenant : 
-                                <ol class="classic-text">
-                                    <li>Une identité visuelle ;</li>
-                                    <li>Un wireframe ;</li>
-                                    <li>Une maquette ;</li>
-                                    <li>Un rendu final via le CMS : Odoo.</li>
-                                </ol>
-                            </p>
-                            <p><button class="glass button background-005"><a href="https://yligen.odoo.com" target="_blank">Consulter la précédente page de l'agence YLIGEN</a></button></p>
-                        </h3>
-                        <div class="real-onegrid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Design/Nav/2.png" alt="Website NavBar - Yligen - Picture" width="1100" height="100">
-                                <h3>Bloc : Barre de navigation (fixe)</h3>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Design/Home/2.png" alt="Website Home - Yligen - Picture" width="1100" height="500">
-                                <h3>Page d'accueil</h3>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Design/Contact/2.png" alt="Website Contact Form - Yligen - Picture" width="1100" height="700">
-                                <h3>Bloc : Formulaire de contact</h3>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Design/Footer/2.png" alt="Website Footer - Yligen - Picture" width="1100" height="200">
-                                <h3>Bloc : Footer</h3>
-                            </div>
-                        </div>
-                        <h3 class="service-title glass padding margin-top background-005">Goon : Application web synchronisée
-                            <p class="classic-text"><br>Parti de zéro pour réaliser : 
-                                <ol class="classic-text">
-                                    <li>Une identité visuelle ;</li>
-                                    <li>Un zoning ;</li>
-                                    <li>Un wireframe ;</li>
-                                    <li>Une maquette ;</li>
-                                    <li>Application web synchronisé jusqu'à 10 joueurs</li>
-                                    <li>Un rendu final en JavaScript, HTML, CSS, Node et Socket.</li>
-                                </ol>
-                            </p>
-                            <p><button class="glass button background-005"><a href="https://lennygadroy.github.io/goon/" target="_blank">Testez-le par vous-même →</a></button></p>
-                        </h3>
-                        <div class="real-onegrid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Projects/Goon/1.png" alt="Goon - Blindtests - Picture" width="1100" height="800">
-                                <h3>Page d'accueil : Sélection du jeu</h3>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Projects/Goon/2.png" alt="Goon - Blindtests - Picture" width="1100" height="650">
-                                <h3>Section de jeu</h3>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <hr class="glass-bar">
-                </hr>
-                <section class="real-section">
-                    <div class="real-container glass-noeffect background-005">
-                        <h2 class="service-title glass padding background-005" id="real-Communication">3. Communication
-                        </h2>
-                        <h3 class="service-title glass padding background-005">a. Publications</h3>
-                        <div class="real-grid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Citroen.jpg" alt="Publication Citroën - Facebook" width="300" height="300">
-                                <h3>Citroën Condren</h3>
-                                <p class="role"><em>Promotion de biens d'occasion</em></p>
-                                <div class="real-social">
-                                    <a href="https://reseau.citroen.fr/chauny/" target="_blank">Site web</a>
-                                    <a href="https://www.facebook.com/photo?fbid=122128724912099643&set=pcb.122128725128099643" target="_blank">Facebook</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Guy_Demarle.jpg" alt="Publication Guy Demarle - Facebook"
-                                    width="300" height="300">
-                                <h3>Guy Demarle</h3>
-                                <p class="role"><em>Annonce de recrutement</em></p>
-                                <div class="real-social">
-                                    <a href="https://www.guydemarle.com/" target="_blank">Site web</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Guy_Demarle_2.jpg" alt="Publication Guy Demarle - Facebook"
-                                    width="300" height="300">
-                                <h3>Guy Demarle</h3>
-                                <p class="role"><em>Annonce de recrutement</em></p>
-                                <div class="real-social">
-                                    <a href="https://www.guydemarle.com/" target="_blank">Site web</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h3 class="service-title glass padding margin-top background-005">b. Logos</h3>
-                        <div class="real-onegrid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/NewYligen.svg" alt="Logo - Yligen" width="1100" height="275">
-                                <h3>Yligen</h3>
-                                <p class="role"><em>Redesign de logo</em></p>
-                                <div class="real-social">
-                                    <a href="https://www.yligen.odoo.com" target="_blank">Site web</a>
-                                    <a href="https://www.instagram.com/yligen.off/" target="_blank">Instagram</a>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="glass-bar">
-                        <div class="real-grid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Yligen.png" alt="Logo - Yligen" width="300" height="300">
-                                <h3>Yligen</h3>
-                                <p class="role"><em>Création de logo</em></p>
-                                <div class="real-social">
-                                    <a href="https://www.yligen.odoo.com" target="_blank">Site web</a>
-                                    <a href="https://www.instagram.com/yligen.off/" target="_blank">Instagram</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/GeopTime.svg" alt="Logo GeopTime - Site internet" width="300"
-                                    height="300">
-                                <h3>GeopTime</h3>
-                                <p class="role"><em>[refonte] Création de logo</em></p>
-                                <div class="real-social">
-                                    <a href="https://geoptime.com/" target="_blank">Site web</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/NDRC.png" alt="Logo NDRC - Site internet" width="300"
-                                    height="300">
-                                <h3>NDRC</h3>
-                                <p class="role"><em>Création de logo</em></p>
-                                <div class="real-social">
-                                    <a href="https://ndrc-colbert.odoo.com/" target="_blank">Site web</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Lega.png" alt="Logo Lega" width="300" height="300">
-                                <h3>Lega : Lenny Gadroy</h3>
-                                <p class="role"><em>Création de logo</em></p>
-                                <div class="real-social">
-                                    <a href="https://www.linkedin.com/in/lennygadroy/" target="_blank">LinkedIn</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Goon.svg" alt="Logo Goon" width="300" height="300">
-                                <h3>Goon</h3>
-                                <p class="role"><em>Création de logo</em></p>
-                                <div class="real-social">
-                                    <a href="#" target="_blank">Site web</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Sportly.png" alt="Logo Sportly" width="300" height="300">
-                                <h3>Sportly</h3>
-                                <p class="role"><em>Création de logo</em></p>
-                            </div>
-                        </div>
-                        <h3 class="service-title glass padding margin-top background-005">c. Affiches</h3>
-                        <div class="real-grid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Rubrique_déco.jpg"
-                                    alt="Rubrique - Gourmandises & Beaux objets Publicité" width="300" height="500">
-                                <h3>Gourmandises & Beaux objets</h3>
-                                <p class="role"><em>Rubrique décoration</em></p>
-                                <div class="real-social">
-                                    <a href="https://www.gourmandisesetbeauxobjets.fr/" target="_blank">Site web</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Chess.png" alt="Affiche Chess - Site internet" width="300"
-                                    height="500">
-                                <h3>Semaine des Echecs</h3>
-                                <p class="role"><em>Création d'affiche</em></p>
-                                <div class="real-social">
-                                    <a href="https://mjepcormontreuil.com/" target="_blank">Site web</a>
-                                </div>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Comm/Soldes_Noël.png"
-                                    alt="Affiche Soldes Noël - Carrefour - Site internet" width="300" height="500">
-                                <h3>Carrefour</h3>
-                                <p class="role"><em>Création d'affiche</em></p>
-                                <div class="real-social">
-                                    <a href="https://carrefour.com/" target="_blank">Site web</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <hr class="glass-bar">
-                </hr>
-                <section class="real-section">
-                    <div class="real-container glass-noeffect background-005">
-                        <h3 class="service-title glass padding background-005" id="real-Photographie">4. Photographie
-                            <p class="classic-text"><br>Prises de vue réalisées avec un Samsung S23 Ultra<br>- Réglages optiques natifs</p>
-                        </h3>
-                        <h3 class="service-title glass padding background-005">a. Concerts</h3>
-                        <div class="real-grid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Soprano/1.jpg" alt="Foire en Scène - Soprano - Picture" width="300" height="300">
-                                <h3>Soprano</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Samedi 06 Septembre 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Gims/1.jpg" alt="Gims Concert - Picture" width="300" height="300">
-                                <h3>GIMS</h3>
-                                <p class="role">Iso Arena, Les Sables d'Olonne</p>
-                                <p class="bio"><em>Jeudi 10 Juillet 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Pieces_Jaunes/1.jpg" alt="Gala Pièces Jaunes 2025 - Picture" width="300" height="300">
-                                <h3>Gala des Pièces Jaunes</h3>
-                                <p class="role">La Défense Arena, Paris</p>
-                                <p class="bio"><em>Jeudi 23 Janvier 2025</em></p>
-                            </div>
-                        </div>
-                        <h3 class="service-title glass padding margin-top background-005">b. Cabaret Vert : <em>édition 2025</em></h3>
-                        <div class="real-grid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Will_Smith/1.jpg" alt="Cabaret Vert - Will Smith - Picture" width="300" height="300">
-                                <h3>Will Smith</h3>
-                                <p class="role">Cabaret Vert, Charleville-Mézières</p>
-                                <p class="bio"><em>Dimanche 17 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Julien_Dore/1.jpg" alt="Cabaret Vert - Julien Doré - Picture" width="300" height="300">
-                                <h3>Julien Doré</h3>
-                                <p class="role">Cabaret Vert, Charleville-Mézières</p>
-                                <p class="bio"><em>Dimanche 17 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Alan_Walker/1.jpg" alt="Cabaret Vert - Alan Walker - Picture" width="300" height="300">
-                                <h3>Alan Walker</h3>
-                                <p class="role">Cabaret Vert, Charleville-Mézières</p>
-                                <p class="bio"><em>Samedi 16 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Booba/1.jpg" alt="Cabaret Vert - Booba - Picture" width="300" height="300">
-                                <h3>Booba</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Vendredi 15 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/SDM/1.jpg" alt="Cabaret Vert - SDM - Picture" width="300" height="300">
-                                <h3>SDM</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Vendredi 15 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Sean_Paul/1.jpg" alt="Cabaret Vert - Sean Paul - Picture" width="300" height="300">
-                                <h3>Sean Paul</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Vendredi 15 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Suki_Waterhouse/1.jpg" alt="Cabaret Vert - Suki Waterhouse - Picture" width="300" height="300">
-                                <h3>Suki Waterhouse</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Vendredi 15 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Zaho_de_Sagazan/1.jpg" alt="Cabaret Vert - Zaho de Sagazan - Picture" width="300" height="300">
-                                <h3>Zaho de Sagazan</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Vendredi 15 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/DJ_Snake/1.jpg" alt="Cabaret Vert - DJ Snake - Picture" width="300" height="300">
-                                <h3>DJ Snake</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Jeudi 14 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Bigflo_Oli/1.jpg" alt="Cabaret Vert - Bigflo & Oli - Picture" width="300" height="300">
-                                <h3>Bigflo & Oli</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Jeudi 14 Août 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Cabaret_Vert/Adele_Castillon/1.jpg" alt="Cabaret Vert - Adèle Castillon - Picture" width="300" height="300">
-                                <h3>Adèle Castillon</h3>
-                                <p class="role">Foire en Scène, Châlons-en-Champagne</p>
-                                <p class="bio"><em>Jeudi 14 Août 2025</em></p>
-                            </div>
-                        </div>
-                        <h3 class="service-title glass padding margin-top background-005">c. Événements</h3>
-                        <div class="real-grid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Monaco/1.jpg" alt="Monaco F1 GP 2025 - Picture" width="300" height="300">
-                                <h3>Monaco F1 Grand Prix</h3>
-                                <p class="role">Circuit Monte-Carlo, Monaco</p>
-                                <p class="bio"><em>Dimanche 25 Mai 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/BDGM/1.jpg" alt="Brûleurs de Gommes 2025 - Picture" width="300" height="300">
-                                <h3>Brûleurs de Gommes</h3>
-                                <p class="role">Circuit Spa Francorchamps, Belgique</p>
-                                <p class="bio"><em>Samedi 6 Avril 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Regalia/1.jpeg" alt="Régalia Reims - Picture" width="300" height="300">
-                                <h3>Régalia</h3>
-                                <p class="role">Cathédrale Notre-Dame, Reims</p>
-                                <p class="bio"><em>Samedi 09 Août 2025</em></p>
-                            </div>
-                        </div>
-                        <h3 class="service-title glass padding margin-top background-005">d. Paysages </h3>
-                        <div class="real-grid">
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/CMZ/2_1.jpg" alt="Ville de Charleville-Mézières" width="300" height="300">
-                                <h3>Paysages nocturnes urbains</h3>
-                                <p class="role">Charleville-Mézières</p>
-                                <p class="bio"><em>Septembre 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/CMZ/1_1.jpg" alt="Ville de Charleville-Mézières" width="300" height="300">
-                                <h3>Paysages urbains</h3>
-                                <p class="role">Charleville-Mézières</p>
-                                <p class="bio"><em>Septembre 2025</em></p>
-                            </div>
-                            <div class="real-photo glass background-005">
-                                <img src="images/Reals/Photos/Summer/1.jpg" alt="Sables d'Olonne - Summer Picture" width="300" height="300">
-                                <h3>Plages et Paysages naturels</h3>
-                                <p class="role">Les Sables d'Olonne, Vendée</p>
-                                <p class="bio"><em>Juillet 2025</em></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    <div id="services" class="page">
-        <div class="container">
-            <div class="content-wrapper">
-                <section class="hero glass">
-                    <h1>Mes Compétences</h1>
-                    <p>Compétences acquises lors de mes expériences professionnelles, de mes passions et loisirs.<br>Mais aussi en autodidacte, par une pratique artistique constante depuis plusieurs années.</p>
-                </section>
-                <hr class="glass-bar">
-                </hr>
-                <div class="real-container glass-noeffect background-005">
-                    <h2 class="service-title glass padding background-005">1. Intégration & Design Web</h2>
-                    <section class="services-grid">
-                        <div class="service-card glass">
-                            <div class="service-header">
-                                <div class="service-icon">🎨</div>
-                                <h3>UI Design</h3>
-                            </div>
-                            <p><em>L'UI design se concentre sur l'aspect visuel et l'esthétique d'un produit numérique. C'est le processus de création d'interfaces attrayantes et faciles à utiliser.</em></p>
-                            <ul class="service-features">
-                                <li>Conception Visuelle</li>
-                                <li>Zoning, Wireframe, Maquette</li>
-                                <li>Mises en page</li>
-                                <li>Couleurs & Typographie</li>
-                            </ul>
-                        </div>
-                        <div class="service-card glass">
-                            <div class="service-header">
-                                <div class="service-icon">🧠</div>
-                                <h3>UX Design</h3>
-                            </div>
-                            <p><em>L'UX design vise à améliorer la satisfaction de l'utilisateur en rendant le produit facile et agréable à utiliser. Le but est d'optimiser l'expérience globale de l'utilisateur.</em></p>
-                            <ul class="service-features">
-                                <li>Conception d'Intégration</li>
-                                <li>Design Responsive</li>
-                                <li>Prototypage</li>
-                            </ul>
-                        </div>
-                        <div class="service-card glass">
-                            <div class="service-header">
-                                <div class="service-icon">🖥️</div>
-                                <h3>Développement Web</h3>
-                            </div>
-                            <p><em>Le développement web est la création de sites et d'applications web. Il englobe toutes les tâches nécessaires à la construction d'un site, du front-end au back-end.</em>
-                            </p>
-                            <ul class="service-features">
-                                <li>Développement Front-end </li>
-                                <li>Intégration Back-end </li>
-                                <li>Optimisation SEO</li>
-                            </ul>
-                        </div>
-                        <div class="service-card glass">
-                            <div class="service-header">
-                                <div class="service-icon">🚀</div>
-                                <h3>Stratégie Digitale</h3>
-                            </div>
-                            <p><em>La stratégie digitale planifie la présence en ligne d'une entreprise pour atteindre ses objectifs commerciaux. Elle définit les actions à mener pour optimiser les performances sur les canaux numériques.</em>
-                            </p>
-                            <ul class="service-features">
-                                <li>Transformation Digitale</li>
-                                <li>Stratégie de Croissance</li>
-                                <li>Analyse & Rapports</li>
-                            </ul>
-                        </div>
-                    </section>
+            <div class="panel" id="admin"> 
+                <div class="panel-title">Compte Administrateur</div>
+                <img src="img/fallout.svg" alt="" width="300px" height="auto">
+                <div class="left-right inversed">
+                    <span>Lenny Gadroy</span>
+                    <span>20 ans</span>
                 </div>
-                <hr class="glass-bar">
-                <div class="real-container glass-noeffect background-005">
-                    <h2 class="service-title glass padding background-005">2. Communication</h2>
-                    <section class="services-grid">
-                        <div class="service-card glass">
-                            <div class="service-header">
-                                <div class="service-icon">✏️</div>
-                                <h3>Graphiste</h3>
-                            </div>
-                            <p><em>Le graphiste conçoit des visuels pour le web, l'imprimé et le digital, afin de créer des identités visuelles et des interfaces utilisateur qui sont à la fois esthétiques et fonctionnelles. Son rôle est de traduire un message en une image percutante, en veillant à la cohérence de la marque.</em>
-                            </p>
-                            <ul class="service-features">
-                                <li>Couleurs & Typographie</li>
-                                <li>Composition visuelle</li>
-                                <li>Adaptabilité aux plateformes</li>
-                                <li>Veille créative</li>
-                            </ul>
-                            <button class="glass button"><a href="#" onclick="showPage('real')">Consulter mes réalisations →</a></button>
-                        </div>
-                        <div class="service-card glass">
-                            <div class="service-header">
-                                <div class="service-icon">📕</div>
-                                <h3>Responsable de contenu</h3>
-                            </div>
-                            <p><em>Le Responsable de contenu est le chef d'orchestre du contenu d'une marque. De la stratégie à la publication, il est à la fois un excellent rédacteur et un stratège qui utilise les données et les techniques de SEO pour s'assurer que le contenu touche le public ciblé.</em>
-                            </p>
-                            <ul class="service-features">
-                                <li>Storytelling</li>
-                                <li>Optimisation du SEO</li>
-                                <li>Planification éditoriale</li>
-                                <li>Analyse des performances</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-                <hr class="glass-bar">
-                <div class="real-container glass-noeffect background-005">
-                    <h2 class="service-title glass padding background-005">3. Artistique</h2>
-                    <section class="services-onegrid">
-                        <div class="service-card glass">
-                            <div class="service-header">
-                                <div class="service-icon">🖼️</div>
-                                <h3>Photographie </h3>
-                            </div>
-                            <p><em>Art de capturer des images à l'aide d'un appareil photo. C'est un moyen d'expression qui immortalise des moments et raconte des histoires.</em></p>
-                            <ul class="service-features">
-                                <li>Maîtrise du matériel</li>
-                                <li>Composition</li>
-                                <li>Éclairage</li>
-                                <li>Retouche photo</li>
-                            </ul>
-                            <button class="glass button"><a href="#" onclick="showPage('real')">Consulter mes réalisations →</a></button>
-                        </div>
-                    </section>
+                <div class="left-right">
+                    <span>Charleville-Mézières</span>
+                    <span>Reims</span>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
-    <div id="contact" class="page">
-        <div class="container">
-            <div class="content-wrapper">
-                <section class="contact-grid">
-                    <div class="contact-form glass">
-                        <h2>Contactez-moi !</h2>
-                        <form method="post">
-                            <div class="form-group">
-                                <label for="name">Nom et Prénom</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Sujet</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message"></textarea>
-                            </div>
-                            <button type="submit" class="cta-button">Envoyer votre message</button>
-                        </form>
-                    </div>
-                    <div class="contact-info glass">
-                        <h2>Informations de contact</h2>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📧</div>
-                            <div class="contact-item-text">
-                                <h4>Email</h4>
-                                <a href="mailto:lennygadroy@gmail.com?subject=Contact Portfolio">
-                                    <p class="classic-text" style="font-style: normal;">lennygadroy@gmail.com</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📞</div>
-                            <div class="contact-item-text">
-                                <h4>Téléphone</h4>
-                                <p>(+33) 6 52 51 49 19</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon-large">📍</div>
-                            <div class="contact-item-text">
-                                <h4>Adresses</h4>
-                                <ul>
-                                    <li>Charleville-Mézières (08000)</li>
-                                    <li>Reims (51100)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon-large">📚</div>
-                            <div class="contact-item-text">
-                                <h4>Mes Projets</h4>
-                                <ul>
-                                    <li>GOON - Blindtests : Appli web multijoueur</li>
-                                    <li>YLIGEN : Site web</li>
-                                    <li>Noevell : Site web</li>
-                                    <li>Projet tutoré : GeopTime (en cours)</li>
-                                    <li>Communication digitale</li>
-                                    <li>Organisation d'événements</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
+    <footer class="tva-footer">
+        <div class="footer-section left">
+            <span>© 2025 LENNY GADROY</span>
+            <span class="sep">::</span>
+            <a href="/terms.html" target="_blank" class="footer-link">VERSION 2.0.4</a>
+        </div>    
+        <div class="footer-section center">
+            <span class="blink">_WAITING FOR INPUT</span>
         </div>
-    </div>
-    <div id="cv" class="page">
-        <div class="glass-noeffect cv-container">
-            <div class="cv-header">
-                <div class="header-content">
-                    <h1>WebDesigner et Intégrateur</h1>
-                    <p class="pitch">Étudiant en troisième année de Licence CRRW à l'École d'Ingénieurs en Sciences Industrielles et Numérique. Je suis à la recherche d'un stage afin d'acquérir une expérience pratique de fin de formation et d'étendre mes compétences techniques.</p>
-                </div>
-                <img src="images/PP Reims.jpg" alt="Photo de Lenny GADROY" class="photo-profil">
-            </div>
-            <div class="cv-cont">
-                <section class="colonne-gauche">
-                    <div class="section-block cv-contact-info">
-                        <h2>Contact</h2>
-                        <ul class="contact-list">
-                            <li><i class="fas"></i> 20 ans</li>
-                            <hr>
-                            <li><i class="fas"></i> lennygadroy@gmail.com</li>
-                            <li><i class="fas"></i> 06 52 51 49 19</li>
-                            <hr>
-                            <li><i class="fas"></i> Charleville-Mézières (08000)</li>
-                            <li><i class="fas"></i> Reims (51100)</li>
-                            <hr>
-                            <li><i class="fas"></i> Permis B</li>
-                            <li><i class="fas"></i> Véhiculé</li>
-                            <hr>
-                            <li><i class="fab"></i> <a href="https://linkedin.com/in/LennyGadroy" target="_blank">linkedin.com/in/LennyGadroy</a></li>
-                        </ul>
-                    </div>
-                    <div class="section-block">
-                        <h2>Hard Skills</h2>
-                        <ul class="skills-list">
-                            <li>
-                                <h3>Webdesign</h3>
-                                <ul>
-                                    <li>Figma</li>
-                                    <li>Suite Adobe</li>
-                                </ul>
-                            </li>
-                            <li><h3>UX / UI Design</h3></li>
-                            <li>
-                                <h3>Intégration</h3>
-                                <ul>
-                                    <li>HTML 5</li>
-                                    <li>CSS 3</li>
-                                    <li>JavaScript</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3>Communication</h3>
-                                <ul>
-                                    <li>Canva</li>
-                                    <li>CapCut</li>
-                                    <li>SCRL</li>
-                                </ul>
-                            </li>
-                            <li><h3>Réseaux sociaux</h3></li>
-                            <li>
-                                <h3>Gestion de projet</h3>
-                                <ul>
-                                    <li>Notion</li>
-                                    <li>Trello</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="section-block">
-                        <h2>Certifications</h2>
-                        <div>
-                            <h3><a href="https://app-eu1.hubspot.com/academy/achievements/9mx1cscc/en/1/lenny-gadroy/seo" target="_blank">Certification SEO</a></h3>
-                            <p>par HubSpot</p>
-                        </div>
-                        <div>
-                            <h3>Certification PIX</h3>
-                            <p class="score">Score : 531</p>
-                        </div>
-                    </div>
-                    <div class="section-block">
-                        <h2>Soft Skills</h2>
-                        <ul class="skills-list">
-                            <li>Dynamique</li>
-                            <li>Rigueur et Organisation</li>
-                            <li>Autonomie</li>
-                            <li>Dévouement</li>
-                        </ul>
-                    </div>
-                    <div class="section-block interets">
-                        <h2>Centres d'Intérêt</h2>
-                        <div>
-                            <h3>Sports</h3>
-                            <ul>
-                                <li>Cyclisme</li>
-                                <li>Musculation</li>
-                                <li>Pétanque</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>Automobile</h3>
-                            <ul>
-                                <li>Sports mécaniques : F1, MotoGP</li>
-                                <li>Industrie automobile</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>Musiques</h3>
-                            <ul>
-                                <li>Styles variés : de 1980 à 2025</li>
-                                <li>Concerts et Festivals</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section class="colonne-droite">
-                    <div class="section-block experiences">
-                        <h2>Expériences Professionnelles</h2>
-                        <div class="experience-item">
-                            <p class="titre-item">
-                                <strong class="poste">Webdesigner UI / UX</strong>
-                                <p>Yligen</p>
-                                <span class="dates">de juillet 2025 à septembre 2025</span>
-                            </p>
-                            <ul class="taches">
-                                <li><b>Conception d'interfaces utilisateur (UI) :</b> Élaboration de l'arborescence, des maquettes (wireframes) et des prototypes fonctionnels pour garantir une cohérence graphique et ergonomique sur tous les supports.</li>
-                                <li><b>Optimisation de l'expérience utilisateur (UX) :</b> Réalisation de tests utilisateurs et d'analyses pour optimiser les parcours clients, réduire les frictions et améliorer l'accessibilité du site ou de l'application.</li>
-                                <li><b>Veille technologique et Création Digitale :</b> Suivi des tendances graphiques et technologiques pour proposer des designs innovants, et collaboration avec les développeurs pour assurer l'intégration technique des maquettes.</li>
-                            </ul>
-                        </div>
-                        <div class="experience-item">
-                            <p class="titre-item">
-                                <strong class="poste">Assistant en Optimisation Clientèle et Stratégie de Vente</strong>
-                                <p>Citroën - Les Garages Français</p>
-                                <span class="dates">De janvier 2024 à décembre 2024</span>
-                            </p>
-                            <ul class="taches">
-                                <li><b>Mise en œuvre d’une stratégie de prospection omnicanale</b> pour identifier et qualifier de nouveaux leads.</li>
-                                <li><b>Négociation des conditions commerciales</b> lors des ventes, auprès de clients BtoC et BtoB.</li>
-                                <li><b>Élaboration et conception d’une stratégie de communication</b>, dans le but d’optimiser les plateformes digitales de l'entreprise.</li>
-                            </ul>
-                        </div>
-                        <div class="experience-item">
-                            <p class="titre-item">
-                                <strong class="poste">Coach et Formateur en Jeux de Stratégie : Échecs</strong>
-                                <p>Mairie de Cormontreuil</p>
-                                <span class="dates">D'août 2023 à août 2024</span>
-                            </p>
-                            <ul class="taches">
-                                <li><b>Conception et gestion de projet :</b> Organisation et lancement d'un <b>stage d'initiation aux échecs</b> en partenariat avec la Mairie, incluant la planification logistique et la promotion locale.</li>
-                                <li><b>Encadrement et pédagogie :</b> Création et <b>aménagement d'un club d'échecs</b> en libre accès pour un public débutant et intermédiaire.</li>
-                                <li><b>Autonomie et initiative :</b> Gestion complète de l'activité, de la prospection (recherche d’élèves/stagiaires) à l'adaptation des programmes pédagogiques.</li>
-                            </ul>
-                        </div>
-                        <div class="experience-item">
-                            <p class="titre-item">
-                                <strong class="poste">Passeport Citoyen</strong>
-                                <p>Mairie de Cormontreuil</p>
-                                <span class="dates">Depuis février 2023</span>
-                            </p>
-                            <p class="details"><b>Engagement bénévole</b> dans le cadre des événements municipaux, démontrant un
-                                fort sens de <b>l'initiative et des responsabilités</b>.</p>
-                            <ul class="taches">
-                                <li><b>Contribution à la réussite des manifestations</b> en assurant la mise en place des infrastructures et l'accueil du public.</li>
-                                <li><b>Adaptabilité et polyvalence</b> en intervenant sur des missions variées (installation, tenue de stand, service).</li>
-                                <li><b>Développement du sens du collectif</b> et du travail en équipe.</li>
-                            </ul>
-                        </div>
-                    </div>
-                        <div class="section-block diplomes-formations">
-                        <h2>Diplômes et Formations</h2>
-                        <div class="formation-item">
-                            <p class="titre-item">
-                                <strong class="diplome">Licence Conception, Rédaction et Réalisation Web</strong>
-                                <p>École d'Ingénieurs, Charleville-Mézières (08000)</p>
-                                <span class="dates">Depuis septembre 2025</span>
-                            </p>
-                            <p class="details">Formation axée sur le <b>développement de projets numériques</b>, visant à développer des <b>compétences techniques et transversales</b> pour les métiers du numérique.</p>
-                        </div>
-                        <div class="formation-item">
-                            <p class="titre-item">
-                                <strong class="diplome">BTS Négociation et Digitalisation de la Relation Client</strong>
-                                    <p>Lycée Jean-Baptiste Colbert, Reims (51100)</p>
-                                <span class="dates">De septembre 2023 à juillet 2025</span>
-                            </p>
-                            <p class="details">Diplôme obtenu avec la <b>mention Bien</b> après deux années de formation, j'ai acquis une solide base en commercialisation :</p>
-                            <ul class="taches">
-                                <li><b>Développement Commercial</b> : Prospection et négociation client, avec une forte capacité à identifier de nouvelles opportunités de marché et à fidéliser la clientèle existante.</li>
-                                <li><b>Stratégie et Création Digitale</b> : Conception de contenus pour les réseaux sociaux et de sites internet, et animation de communauté, visant à renforcer la visibilité de la marque et l'engagement de la communauté.</li>
-                            </ul>
-                        </div>
-                        <div class="formation-item">
-                            <p class="titre-item">
-                                <strong class="diplome">Bac Général</strong>
-                                <p>Lycée Hugues Libergier, Reims (51100)</p>
-                                <span class="dates">De septembre 2020 à juillet 2023</span>
-                            </p>
-                            <p class="details">Diplôme obtenu avec les spécialités Mathématiques et S.E.S</p>
-                            <ul class="taches">
-                                <li><b>Analyse Économique et Sociale (SES) :</b> Compréhension des enjeux économiques contemporains (fonctionnement des marchés, financement de l'entreprise) et analyse des dynamiques sociales, favorisant une vision globale de l'environnement de l'entreprise.</li>
-                                <li><b>Rigueur et Logique Mathématique :</b> Développement de l'esprit de synthèse et de la capacité d'abstraction par la résolution de problèmes complexes, apportant une méthodologie structurée et rigoureuse.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
+        <div class="footer-section right">
+            <a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GITHUB]</a>
+            <a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LINKEDIN]</a>
+            <a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link">[EMAIL]</a>
         </div>
-    </div>
-    <div id="footer">
-        <div class="container">
-            <footer class="glass">
-                <div class="footer-content">
-                    <div class="footer-links">
-                        <a href="https://www.linkedin.com/in/lennygadroy/">LinkedIn</a>
-                        <a href="https://www.instagram.com/lennygdr19/">Instagram</a>
-                        <a href="#">Politique de confidentialité</a>
-                        <a href="#">Conditions</a>
-                        <a href="#" onclick="showPage('contact')">Contact</a>
-                    </div>
-                    <div class="copyright">
-                        &copy; 2025 Lenny Gadroy Portfolio. <em>Inspiration : Liquid Glass Apple.</em>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script src="assets/Glass-effect.js"></script>
+    </footer>
+    <script src="assets/script.js"></script>
 </body>
 </html>
