@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         xpNext: document.getElementById('xp-next'),
         lvlDisplay: document.getElementById('level-display'),
         catalog: document.getElementById('catalog-list'),
-        cartZone: document.getElementById('cart-zone'),
-        cartTotal: document.getElementById('cart-total'),
+        Zone: document.getElementById('zone'),
+        Cart: document.getElementById('cart'),
         acquired: document.getElementById('acquired-list'),
-        filterBtns: document.querySelectorAll('.filter-btn'),
-        sortSelect: document.getElementById('sort-select'),
+        filterBtns: document.querySelectorAll('filter-btn'),
+        Sort: document.getElementById('sort'),
         modal: document.getElementById('confirm-modal'),
         Yes: document.getElementById('yes'),
         No: document.getElementById('no'),
@@ -129,14 +129,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const cartItems = CATALOG.filter(i => appState.cart.includes(i.id));
-        dom.cartZone.innerHTML = cartItems.length ? '' : '<p>Glissez les compétences ici</p>';
+        dom.Zone.innerHTML = cartItems.length ? '' : '<p>Glissez les compétences ici</p>';
         cartItems.forEach(item => {
             const el = document.createElement('div');
             el.className = 'skill-item';
             el.innerHTML = `<span>${item.name}</span><span>${item.price} CR</span><button class="btn-remove" onclick="removeFromCart(${item.id})">X</button>`;
-            dom.cartZone.appendChild(el);
+            dom.Zone.appendChild(el);
         });
-        dom.cartTotal.textContent = cartItems.reduce((acc, i) => acc + i.price, 0);
+        dom.Cart.textContent = cartItems.reduce((acc, i) => acc + i.price, 0);
 
         dom.acquired.innerHTML = '';
         appState.acquired.forEach(id => {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    dom.sortSelect.addEventListener('change', (e) => {
+    dom.Sort.addEventListener('change', (e) => {
         currentSort = e.target.value;
         render();
     });
@@ -177,15 +177,15 @@ document.addEventListener('DOMContentLoaded', () => {
         saveState();
     };
 
-    dom.cartZone.addEventListener('dragover', (e) => {
+    dom.Zone.addEventListener('dragover', (e) => {
         e.preventDefault();
-        dom.cartZone.classList.add('drag-over');
+        dom.Zone.classList.add('drag-over');
     });
 
-    dom.cartZone.addEventListener('dragleave', () => dom.cartZone.classList.remove('drag-over'));
-    dom.cartZone.addEventListener('drop', (e) => {
+    dom.Zone.addEventListener('dragleave', () => dom.Zone.classList.remove('drag-over'));
+    dom.Zone.addEventListener('drop', (e) => {
         e.preventDefault();
-        dom.cartZone.classList.remove('drag-over');
+        dom.Zone.classList.remove('drag-over');
         const id = parseInt(e.dataTransfer.getData('text/plain'));
         if (id) addToCart(id);
     });
@@ -232,14 +232,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.getElementById('btn-reset').addEventListener('click', () => {
+    document.getElementById('reset').addEventListener('click', () => {
         if (confirm("RESET SYSTEM?")) {
             localStorage.removeItem('lennyShopState');
             location.reload();
         }
     });
 
-    document.getElementById('btn-admin').addEventListener('click', () => {
+    document.getElementById('admin').addEventListener('click', () => {
         const pwd = prompt("ENTER ADMIN PASSWORD:");
         if (pwd) {appState.credits = 99999; appState.level = 10; appState.xp = 0; notify("ADMIN ACCESS GRANTED. UNLIMITED POWER.", "success"); saveState();}
     });
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dom.hackGame.style.display = 'none';
             if (win) {
                 const creditGain = 200;
-                const xpGain = 10;
+                const xpGain = 100;
                 appState.credits += creditGain;
                 addXP(xpGain);
                 notify(`PIRATAGE RÉUSSI : +${creditGain} CR | +${xpGain} XP`, 'success');

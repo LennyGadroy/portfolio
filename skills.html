@@ -29,66 +29,70 @@
             </nav>
             <div class="status blink">■ SYSTEM ACTIVE</div>
         </header>
-        <main class="skills-shop">
-            <div class="shop-header">
-                <div class="hud-container">
-                    <div class="hud-top">
+        <main class="skills">
+            <div class="header">
+                <div class="hud">
+                    <div class="top">
                         <span>SOLDE: <span id="credit-amount">0</span> CR</span>
                         <span>LVL <span id="level-display">1</span></span>
                     </div>
-                    <div class="xp-bar-container">
-                        <div class="xp-bar-fill" id="xp-bar"></div>
+                    <div class="xp-bar">
+                        <div class="xp-fill" id="xp-bar"></div>
                     </div>
                     <div style="font-size: 0.8rem; text-align: right;">XP: <span id="xp-amount">0</span> / <span id="xp-next">100</span></div>
                 </div>
-                <div>
-                    <button id="btn-admin">ADMIN ACCESS</button>
-                    <button id="btn-reset">⚠️ RESET</button>
+                <div class="grid-col">
+                    <button id="admin">ADMIN ACCESS</button>
+                    <button id="reset">⚠️ RESET</button>
                 </div>
             </div>
-            <div class="main-grid">
-                <div class="panel" style="grid-column: span 2;">
-                    <h2 class="panel-title">Catalogue</h2>
-                    <div class="filter-bar">
-                        <button class="filter-btn active" data-filter="all">Tous</button>
-                        <button class="filter-btn" data-filter="dev">Intégration</button>
-                        <button class="filter-btn" data-filter="design">Design</button>
-                        <button class="filter-btn" data-filter="social">Communication</button>
-                        <button class="filter-btn" data-filter="soft">Soft Skills</button>
-                        <select id="sort-select" class="sort-select">
-                            <option value="level">Niveau Requis</option>
-                            <option value="price-asc">Prix: - cher au + cher</option>
-                            <option value="price-desc">Prix: + cher au - cher</option>
-                        </select>
-                    </div>
-                    <div id="catalog-list"></div>
-                </div>
-                <div class="grid-row">
+            <div class="grid-col">
+                <div class="left-part">
                     <div class="panel">
-                        <h2 class="panel-title">Panier</h2>
-                        <div id="cart-zone" class="drop-zone">
-                            <p>Glissez les compétences ici</p>
+                        <h2 class="panel-title">Catalogue</h2>
+                        <div class="filter-bar">
+                            <button class="filter active" data-filter="all">Tous</button>
+                            <button class="filter" data-filter="dev">Intégration</button>
+                            <button class="filter" data-filter="design">Design</button>
+                            <button class="filter" data-filter="social">Communication</button>
+                            <button class="filter" data-filter="soft">Soft Skills</button>
+                            <select id="sort" class="sort">
+                                <option value="level">Niveau Requis</option>
+                                <option value="price-asc">Prix: - cher au + cher</option>
+                                <option value="price-desc">Prix: + cher au - cher</option>
+                            </select>
                         </div>
-                        <div style="margin-top: 15px; text-align: right;">
-                            <p>Total: <span id="cart-total">0</span> CR</p>
-                            <button id="btn-checkout" style="width: 100%; font-weight:bold;">>> INSTALLER <<</button>
-                        </div>
-                    </div>
-                    <div class="panel">
-                        <h2 class="panel-title">Acquis</h2>
-                        <div id="acquired-list" class="acquired-grid"></div>
+                        <div id="catalog-list"></div>
                     </div>
                 </div>
-            </div>
-            <div class="panel production-area">
-                <h2 class="panel-title">Minage de Crédits</h2>
-                <div class="left-right">
-                    <div>
-                        <label for="work-time">Temps CPU (H) :</label>
-                        <input type="number" id="work-time" min="1" max="10" value="1">
-                    </div>
-                    <div>
-                        <button id="btn-produce">Lancer le Minage</button>
+                <div class="right-part">
+                    <div class="grid-row">
+                        <div class="panel">
+                            <h2 class="panel-title">Panier</h2>
+                            <div id="zone" class="zone">
+                                <p>Glissez les compétences ici</p>
+                            </div>
+                            <div style="margin-top: 15px; text-align: right;">
+                                <p>Total: <span id="cart">0</span> CR</p>
+                                <button id="btn-checkout" style="width: 100%; font-weight:bold;">>> INSTALLER <<</button>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <h2 class="panel-title">Acquis</h2>
+                            <div id="acquired-list" class="acquired-grid"></div>
+                        </div>
+                        <div class="panel">
+                            <h2 class="panel-title">Minage de Crédits</h2>
+                            <div class="left-right">
+                                <div>
+                                    <label for="work-time">Temps CPU (H) :</label>
+                                    <input type="number" id="work-time" min="1" max="10" value="1">
+                                </div>
+                                <div>
+                                    <button id="btn-produce">Lancer le Minage</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,7 +101,18 @@
     <footer class="tva-footer">
         <div class="footer-section left">
             <span>© 2025 LENNY GADROY</span>
+            <span class="sep">::</span>
+            <a href="/terms.html" target="_blank" class="footer-link">VERSION 2.0.4</a>
         </div>    
+        <div class="footer-section center">
+            <span class="blink">_WAITING FOR INPUT</span>
+        </div>
+        <div class="footer-section right">
+            <a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GITHUB]</a>
+            <a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LINKEDIN]</a>
+            <a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[INSTAGRAM]</a>
+            <a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link">[EMAIL]</a>
+        </div>
     </footer>
     <div class="toast-container" id="toast-container"></div>
     <div id="confirm-modal" class="modal-overlay">

@@ -201,7 +201,8 @@ Default Page
     gap: 1rem;
 }
 
-.grid-col {
+.grid-col,
+.grid-col-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -442,30 +443,31 @@ Projects Page
 .projects .left-part,
 .projects .right-part,
 .projects .one-part {
-    width: calc(90% - 10px);
+    width: calc(100% - 10px);
 
     padding: 0 10px 0 10px;
 }
 
 .projects .left-part h3,
 .projects .right-part h3,
+.reals h3,
 .reals .left-part h3,
 .reals .middle-part h3,
-.reals .right-part h3 {
+.reals .right-part h3,
+.albums h3 {
     font-size: var(--Title-Size);
 
-    margin-bottom: 0;
+    margin: 10px 0 0 0;
     padding-bottom: 0;
 }
 
 .projects .left-part .left-right,
 .projects .right-part .left-right,
+.reals .left-right,
 .reals .left-part .left-right,
 .reals .middle-part .left-right,
 .reals .right-part .left-right,
-.albums .left-part .left-right,
-.albums .middle-part .left-right,
-.albums .right-part .left-right { line-height: var(--SubBody-Height); }
+.albums .left-right { line-height: var(--SubBody-Height); }
 
 .projects ul.left-right,
 .projects ul.left-right li ul li {
@@ -505,43 +507,64 @@ ul.left-right { margin-right: 50px; }
 .reals img:hover,
 .albums img:hover { opacity: 1; }
 
-.projects .left-part img:last-of-type,
-.projects .right-part img:last-of-type,
 .reals .left-part img:last-of-type,
 .reals .middle-part img:last-of-type,
 .reals .right-part img:last-of-type,
 .albums .left-part img:last-of-type,
 .albums .middle-part img:last-of-type,
-.albums .right-part img:last-of-type { margin-bottom: 10px; }
+.albums .right-part img:last-of-type {margin-bottom: 10px;}
 
 /* ------
 Reals Page 
 ----- */
-.reals .grid-col:first-of-type { grid-template-columns: 1fr 1fr; }
-
-.reals .grid-col:last-of-type,
-.albums .grid-col { grid-template-columns: 1fr 1fr 1fr; }
+.reals .panel:first-of-type .grid-col:first-of-type {grid-template-columns: 1fr 2fr;}
 
 /* ------
 Albums Page
 ----- */
 .albums .panel-subtitle { font-size: var(--SubTitle-Size); }
 
+.albums #cab h2,
+.albums #BDGM h2 {margin-bottom: 0;}
+
+.albums #cab h3,
+.albums #BDGM h3 {margin-bottom: 10px;}
+
+.albums #urbains img {margin-bottom: 10px;}
+
 /* ------
 Skills Page 
 ----- */
-.shop-header {
+.skills {
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.skills .grid-col {
+    grid-template-columns: 3fr 1fr;
+}
+
+.skills .left-part {
+    width: 100%;
+}
+
+.skills .right-part {
+    width: 100%;
+}
+
+.skills .header {
     display: flex;
     flex-wrap: wrap;
 
     justify-content: space-between;
     align-items: center;
 
+    margin-top: 20px;
     margin-bottom: 20px;
     gap: 15px;
 }
 
-.hud-container {
+.hud {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -554,7 +577,7 @@ Skills Page
     gap: 5px;
 }
 
-.hud-top {
+.hud .top {
     display: flex;
 
     justify-content: space-between;
@@ -563,17 +586,17 @@ Skills Page
     font-weight: bold;
 }
 
-.xp-bar-container {
+.xp-bar {
     position: relative;
 
     width: 100%;
     height: 10px;
 
-    background: #333;
+    background: var(--Black);
     border: 1px solid var(--Primary);
 }
 
-.xp-bar-fill {
+.xp-fill {
     width: 0%;
     height: 100%;
 
@@ -603,7 +626,7 @@ Skills Page
     gap: 10px;
 }
 
-.filter-btn {
+.filter {
     background: transparent;
     border: 1px solid var(--Primary);
     color: var(--Primary);
@@ -616,13 +639,13 @@ Skills Page
     cursor: pointer;
 }
 
-.filter-btn.active,
-.filter-btn:hover {
+.filter.active,
+.filter:hover {
     background: var(--Primary);
     color: var(--Black);
 }
 
-.sort-select {
+.sort {
     background: var(--Black);
     border: 1px solid var(--Primary);
     color: var(--Primary);
@@ -704,7 +727,7 @@ Skills Page
 .skill-price { font-weight: bold; }
 
 .skill-desc {
-    color: #fff;
+    color: var(--White);
 
     font-size: 1rem;
     text-transform: none;
@@ -754,7 +777,7 @@ Skills Page
     color: var(--Black);
 }
 
-.drop-zone {
+.zone {
     min-height: 200px;
 
     display: flex;
@@ -773,7 +796,7 @@ Skills Page
     transition: all 0.3s ease;
 }
 
-.drop-zone.drag-over {
+.zone.drag-over {
     background-color: rgba(255, 107, 45, 0.2);
     box-shadow: inset 0 0 20px var(--Primary);
 }
@@ -1022,6 +1045,12 @@ Skills Page
     100% { transform: scale(1); }
 }
 
+input[type=number], input:hover[type=number], input:focus[type=number] {
+    background-color: var(--Background);
+    border: 1px solid var(--Primary);
+    color: var(--Primary);
+}
+
 /* ------
 CV Page 
 ----- */
@@ -1163,6 +1192,59 @@ CV Page
 /* ------
 Contact Page 
 ----- */
+.contact .grid-col {
+    grid-template-columns: 2fr 5fr;
+
+    margin-top: 20px;
+}
+
+.contact .file-list {
+    color: var(--Primary);
+
+    list-style: square;
+
+    margin-left: 20px;
+}
+
+.contact .left-right span {
+    color: var(--White);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact form input[type=text],
+.contact form input[type=email] {
+    background-color: var(--Background);
+    border: 1px solid var(--Primary);
+    color: var(--Primary);
+    
+    font-family: var(--Font-Special);
+
+    padding: 5px;
+}
+
+.contact form textarea {
+    background-color: var(--Background);
+    border: 1px solid var(--Primary);
+    color: var(--Primary);
+    
+    font-family: var(--Font-Special);
+    
+    resize: vertical;
+
+    padding: 5px;
+}
+
+.contact form button {
+    align-self: flex-start;
+    
+    margin-top: 10px;
+}
 
 /* ------
 Terms 
@@ -1179,23 +1261,41 @@ Colors
 ----- */
 .status,
 .projects ul.left-right li,
-.cv li b { color: var(--Primary); }
-
+.cv li b,
+.contact label
+{color: var(--Primary);}
 
 .program-list a,
+.projects .left-right em,
 .projects .left-part .left-right span,
 .projects .right-part .left-right span,
+.reals .left-right span,
 .reals .left-part .left-right span,
 .reals .middle-part .left-right span,
 .reals .right-part .left-right span,
-.projects .left-right em,
 .albums .left-right,
+.albums .left-right a,
+.albums .left-part span,
 .cv .right-part .panel-title p,
-.cv .panel>p+p { color: var(--White); }
+.cv .panel>p+p
+{color: var(--White);}
+
+
+.reals .grid-col-2,
+.skills .grid-col:first-of-type
+{grid-template-columns: 1fr 1fr;}
+
+.skills .grid-col:first-of-type
+{grid-template-columns: 3fr 1fr;}
+
+.reals .grid-col,
+.albums .grid-col
+{grid-template-columns: 1fr 1fr 1fr;}
 
 /* ------
 Responsive 
 ----- */
+
 
 /* Laptop */
 @media only screen and (max-width:1199px) {
@@ -1205,6 +1305,7 @@ Responsive
 
         border: none;
         border-bottom: 1px solid var(--Primary);
+
         box-shadow: none;
 
         margin: 0;
