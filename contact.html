@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lenny Gadroy - Contact</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style_min.css">
     <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
 <body>
@@ -35,11 +35,15 @@
                     <div class="panel">
                         <div class="panel-title">Coordonées</div>
                         <ul class="file-list">
-                            <li><a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link">[EMAIL]</a></li>
-                            <li><a href="tel:0652514919" class="footer-link">[TELEPHONE]</a></li>
-                            <li><a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GITHUB]</a></li>
-                            <li><a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LINKEDIN]</a></li>
-                            <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[INSTAGRAM]</a></li>
+                            <li><a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link">[Email]</a></li>
+                            <li><a href="tel:0652514919" class="footer-link">[Téléphone]</a></li>
+                            <hr>
+                            <li><a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GitHub]</a></li>
+                            <li><a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LinkedIn]</a></li>
+                            <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[Instagram]</a></li>
+                            <hr>
+                            <li><a href="https://maps.app.goo.gl/YM9DzGUkwigesQ5cA" target="_blank" class="footer-link">[Localisation Principale]</a></li>
+                            <li><a href="https://maps.app.goo.gl/UyHfHwKkrHXFWk8h9" target="_blank" class="footer-link">[Localisation Secondaire]</a></li>
                         </ul>
                     </div>
                     <div class="panel">
@@ -55,23 +59,34 @@
                         </div>
                         <hr>
                         <div class="left-right">
-                            <span><button><a href="coucou.html">Signaler un problème</a></button></span>
-                            <span><button><a href="coucou.html">Faire une suggestion</a></button></span>
+                            <span><button><a href="">Signaler un problème</a></button></span>
+                            <span><button><a href="">Faire une suggestion</a></button></span>
                         </div>
                     </div>
                 </div>
                 <div class="panel" id="contact-form" style="grid-column: 2 / 4;">
-                    <div class="panel-title">Envoyer un Message</div>
-                    <form method="POST">
-                        <label for="name">Nom :</label>
-                            <input type="text" id="name" name="name" required>
-                        <label for="email">Email :</label>
-                            <input type="email" id="email" name="email" required>
-                        <label for="subject">Objet :</label>
-                            <input type="text" id="subject" name="subject" required>
-                        <label for="message">Message :</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        <button type="submit">Envoyer la Transmission</button>
+                    <div class="panel-title">Envoyer un Transmission</div>
+                    <form method="POST" action="https://formspree.io/f/xnnegzdy">
+                        <div class="input-group">
+                            <input id="nom" type="text" name="nom" class="input" required>
+                            <label for="nom" class="label">Nom</label>
+                        </div>
+                        <div class="input-group">
+                            <input id="email" type="text" name="email" class="input" required>
+                            <label for="email" class="label">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <input id="objet" type="text" name="objet" class="input" required>
+                            <label for="objet" class="label">Objet</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="6" class="input" required></textarea>
+                            <label for="message" class="label">Message</label>
+                        </div>
+                        <div class="left-right">
+                            <button type="submit">Initialiser la Transmission</button>
+                            <button type="reset">Réinitialiser le formulaire</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -92,6 +107,6 @@
             <a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[INSTAGRAM]</a>
         </div>
     </footer>
-    <script src="assets/script.js"></script>
+    <script src="assets/script_min.js"></script>
 </body>
 </html>

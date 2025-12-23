@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const CATALOG = [
-        {id: 1, name: "Anglais B1", price: 90, cat: "soft", level: 1, desc: "Communication internationale", unlock: null},
-        {id: 2, name: "HTML 5", price: 100, cat: "dev", level: 1, desc: "Bases du Web", unlock: null},
-        {id: 3, name: "CSS 3", price: 150, cat: "dev", level: 1, desc: "Mise en forme", unlock: null},
-        {id: 4, name: "JavaScript", price: 250, cat: "dev", level: 2, desc: "Interactivité", unlock: null},
-        {id: 5, name: "Node.js", price: 450, cat: "dev", level: 5, desc: "Backend JS", unlock: null},
-        {id: 6, name: "SEO", price: 300, cat: "soft", level: 4, desc: "Optimisation référencement naturel", unlock: "https://app-eu1.hubspot.com/academy/achievements/9mx1cscc/en/1/lenny-gadroy/seo"},
-        {id: 7, name: "Figma", price: 200, cat: "design", level: 2, desc: "Maquettage UI / UX", unlock: null},
-        {id: 8, name: "Canva", price: 120, cat: "design", level: 3, desc: "Création visuelle", unlock: null},
-        {id: 9, name: "Notion", price: 120, cat: "soft", level: 3, desc: "Organisation & Productivité", unlock: null},
-        {id: 10, name: "Trello", price: 120, cat: "soft", level: 5, desc: "Gestion de tâches", unlock: null},
-        {id: 11, name: "Slack", price: 120, cat: "soft", level: 4, desc: "Communication d'équipe", unlock: null},
-        {id: 12, name: "CapCut", price: 120, cat: "social", level: 3, desc: "Montage vidéo", unlock: null},
-        {id: 13, name: "SCRL", price: 120, cat: "social", level: 2, desc: "Montage photo", unlock: null},
-        {id: 14, name: "Agile / Scrum", price: 120, cat: "soft", level: 7, desc: "Gestion projet.", unlock: null},
-        {id: 19, name: "Suite Adobe", price: 500, cat: "design", level: 10, desc: "Design graphique", unlock: null},
+        {id: 1, name: "Anglais B1", price: 90, cat: "soft", level: 1, desc: "Communication orale et écrite internationale", unlock: null},
+        {id: 2, name: "HTML 5", price: 100, cat: "dev", level: 1, desc: "Structuration sémantique des pages web", unlock: null},
+        {id: 3, name: "CSS 3", price: 150, cat: "dev", level: 1, desc: "Maitrise de la mise en page avec utilisation des Flexbox ou Grid", unlock: null},
+        {id: 4, name: "JavaScript", price: 250, cat: "dev", level: 2, desc: "Maitrise de la syntaxe et de l’utilisation de Vanilla JS", unlock: null},
+        {id: 5, name: "Node.js", price: 450, cat: "dev", level: 5, desc: "Développement d'architectures backend", unlock: null},
+        {id: 6, name: "SEO", price: 300, cat: "soft", level: 4, desc: "Optimisation du référencement naturel", unlock: "https://app-eu1.hubspot.com/academy/achievements/9mx1cscc/en/1/lenny-gadroy/seo"},
+        {id: 7, name: "Figma", price: 500, cat: "design", level: 2, desc: "Conception de systèmes de design et prototypage d'interfaces UI/UX", unlock: null},
+        {id: 8, name: "Canva", price: 350, cat: "design", level: 3, desc: "Création rapide de visuels de marque et supports marketing", unlock: null},
+        {id: 9, name: "Notion", price: 300, cat: "soft", level: 3, desc: "Architecture de bases de données et gestion d'espaces collaboratifs", unlock: null},
+        {id: 10, name: "Trello", price: 120, cat: "soft", level: 5, desc: "Organisation des flux de travail", unlock: null},
+        {id: 11, name: "Slack", price: 120, cat: "soft", level: 4, desc: "Optimisation de la communication asynchrone", unlock: null},
+        {id: 12, name: "CapCut", price: 180, cat: "social", level: 3, desc: "Montage dynamique et post-production", unlock: null},
+        {id: 13, name: "SCRL", price: 200, cat: "social", level: 2, desc: "Création de narrations visuelles et carrousels", unlock: "https://www.instagram.com/p/DR65ixoja6j/"},
+        {id: 14, name: "Agile / Scrum", price: 120, cat: "soft", level: 7, desc: "Pilotage de projets itératifs", unlock: null},
+        {id: 19, name: "Suite Adobe", price: 500, cat: "design", level: 10, desc: "Expertise sur l'écosystème Adobe (Xd, Ai, Id)", unlock: null},
     ];
 
     const initialState = {credits: 200, xp: 0, level: 1, cart: [], acquired: []};
@@ -245,21 +245,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('btn-produce').addEventListener('click', (e) => {
-                const btn = e.target;
-                const hours = parseInt(document.getElementById('work-time').value) || 1;
-                const creditGain = hours * 50;
-                const xpGain = hours * 10;
-                btn.disabled = true;
-                btn.textContent = "CALCUL EN COURS...";
-                setTimeout(() => {
-                    appState.credits += creditGain;
-                    addXP(xpGain);
-                    btn.disabled = false;
-                    btn.textContent = "Lancer le Minage";
-                    notify(`Minage terminé : +${creditGain} CR | +${xpGain} XP`);
-                    saveState();
-                }, 3000);
-            });
+        const btn = e.target;
+        const hours = parseInt(document.getElementById('work-time').value) || 1;
+        const creditGain = hours * 50;
+        const xpGain = hours * 10;
+        btn.disabled = true;
+        btn.textContent = "CALCUL EN COURS...";
+        setTimeout(() => {
+            appState.credits += creditGain;
+            addXP(xpGain);
+            btn.disabled = false;
+            btn.textContent = "Lancer le Minage";
+            notify(`Minage terminé : +${creditGain} CR | +${xpGain} XP`);
+            saveState();
+        }, 3000);
+    });
 
     function scheduleBonus() {
         setTimeout(spawnBonusTrigger, Math.random() * 30000 + 20000);
