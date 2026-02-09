@@ -588,6 +588,16 @@ ul.left-right {margin-right: 0;}
 .skills .grid-col:first-of-type
 {grid-template-columns: 1fr 1fr;}
 
+.reals .grid-col-2 .left-part,
+.albums .grid-col-2 .left-part {
+    margin-left: auto
+}
+
+.reals .grid-col-2 .right-part,
+.albums .grid-col-2 .right-part {
+    margin-right: auto
+}
+
 .reals .grid-col,
 .albums .grid-col
 {grid-template-columns: 1fr 1fr 1fr;}
@@ -615,10 +625,6 @@ ul.left-right {margin-right: 0;}
     padding: 1rem;
     gap: 1rem;
 }
-
-.skills .grid-col:first-of-type
-{grid-template-columns: 3fr 1fr;}
-
 .skills .grid-col {grid-template-columns: 3fr 1fr;}
 
 .skills .left-part {width: 100%;}
@@ -1145,6 +1151,8 @@ input:focus[type=number] {
 /* ------
   CV Page 
 ------ */
+.cv .panel>p:nth-of-type(2) {display: none;}
+
 .cv .header {
     display: flex;
     flex-wrap: wrap;
@@ -1231,6 +1239,8 @@ input:focus[type=number] {
     padding-left: 0;
 }
 
+
+
 .cv #contact ul {
     list-style-type: none;
 
@@ -1293,8 +1303,6 @@ input:focus[type=number] {
 .cv .panel-subtitle {border-bottom: none;}
 
 .dates {
-    display: block;
-
     font-size: var(--BodySize);
     font-style: italic;
 
